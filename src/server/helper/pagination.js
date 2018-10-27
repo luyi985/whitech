@@ -1,4 +1,4 @@
-export default class Pagination {
+class Pagination {
     constructor(dataList, numPerPage) {
 
         if (!Array.isArray(dataList) || !dataList.length) {
@@ -42,3 +42,5 @@ export default class Pagination {
         }
     }
 }
+
+module.exports = Pagination;

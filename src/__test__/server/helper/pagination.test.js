@@ -1,4 +1,4 @@
-import Pagination from '../../../helper/pagination';
+import Pagination from '../../../server/helper/pagination';
 
 describe('Pagination', () => {
 
@@ -15,7 +15,7 @@ describe('Pagination', () => {
         })
     })
 
-    describe('if not pass correct arguments to constructor', () => {
+    describe('if pass correct arguments to constructor', () => {
         let pagination;
         let sampleDataList;
         let perPage;
