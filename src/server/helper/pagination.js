@@ -1,12 +1,15 @@
 class Pagination {
     constructor(dataList, numPerPage) {
-
         if (!Array.isArray(dataList) || !dataList.length) {
-            throw new Error('DataList input is not correct in pagination class');
+            throw new Error(
+                'DataList input is not correct in pagination class'
+            );
         }
 
         if (typeof numPerPage != 'number' || numPerPage <= 0) {
-            throw new Error('numPerPage is not a positive integer in pagination class');
+            throw new Error(
+                'numPerPage is not a positive integer in pagination class'
+            );
         }
 
         this.dataList = dataList;
@@ -30,7 +33,10 @@ class Pagination {
         }
 
         const start = (this.currentPage - 1) * this.numPerPage;
-        const end = (this.numPerPage * this.currentPage) > this.totalItems ? this.totalItems : this.numPerPage * this.currentPage;
+        const end =
+            this.numPerPage * this.currentPage > this.totalItems
+                ? this.totalItems
+                : this.numPerPage * this.currentPage;
 
         return {
             currentPage: this.currentPage,
@@ -39,7 +45,7 @@ class Pagination {
             totalPage: this.totalPages,
             hasNext,
             items: this.dataList.slice(start, end),
-        }
+        };
     }
 }
 

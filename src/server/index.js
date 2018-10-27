@@ -22,14 +22,14 @@ app.use(`/v${version}/api/product`, productRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
-  next(createError(404));
+    next(createError(404));
 });
 
 // error handler
-app.use((err, req, res, next) =>{
-  const { status, message } = err;
-  res.status(status || 500);
-  res.json({status, message});
+app.use((err, req, res, next) => {
+    const { status, message } = err;
+    res.status(status || 500);
+    res.json({ status, message });
 });
 
 module.exports = app;
