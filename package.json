@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "deploy": "now && now alias",
-    "start": "react-scripts start",
+    "dev": "react-scripts start",
     "now-start": "serve -s ./build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "pretty-quick --staged",
-    "server": "node ./bin/www"
+    "start": "node ./bin/www"
   },
   "devDependencies": {
     "prettier": "1.14.3",
