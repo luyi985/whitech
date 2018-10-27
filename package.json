@@ -8,12 +8,15 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "pretty-quick --staged",
+    "fmt": "prettier --write src/{**/**/*,**/*,*,**/*}.{js,jsx,scss}",
     "start": "node ./bin/www"
   },
   "devDependencies": {
+    "eslint-plugin-prettier": "^3.0.0",
+    "node-sass": "^4.9.4",
     "prettier": "1.14.3",
-    "react-scripts": "2.0.5"
+    "react-scripts": "2.0.5",
+    "sass-loader": "^7.1.0"
   },
   "dependencies": {
     "connected-react-router": "4.5.0",

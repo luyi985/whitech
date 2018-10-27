@@ -6,6 +6,6 @@ const loadList = (req, res, next) => {
     } catch (e) {
         next(createError(500, e.message));
     }
-}
+};
 
 module.exports = loadList;

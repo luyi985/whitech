@@ -1,5 +1,19 @@
 {
-  "singleQuote": true,
-  "semi": false,
-  "jsxBracketSameLine": true
+    "parser": "scss",
+    "useTabs": false, 
+    "printWidth": 80,
+    "tabWidth": 4,
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "overrides": [
+        {
+            "files": "*.{js,jsx}",
+            "options": { 
+                "parser": "babylon",
+                "trailingComma": "es5",
+                "jsxBracketSameLine": false,
+                "arrowParens": "avoid",
+            }
+        }
+    ]
 }
